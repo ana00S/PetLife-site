@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    color: #263138;
+}
+
+/* CABEÇALHO */
+header{
+    background-color: #ff9a6c;
+    padding: 24px 80px 24px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .menu a{
+    color: white;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+}
+header .menu a:hover{
+    color: #865037;
+}
+
+/* INICIO */
+
+#inicio{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 80px 128px 80px;
+    position: relative;
+}
+
+.h1inicio{
+    color: #ff725e;
+}
+
+h1, h2{
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.paragrafo{
+    line-height: 150%;
+    margin-bottom: 32px;
+}
+
+.botom{
+    background-color: #ff725e;
+    padding: 16px 32px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.botom:hover{
+    background-color: #ff725e;
+    color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.403);
+    transition: .2s;
+}
+
+.transparent-botom{
+    background-color: transparent;
+    color: #ff725e;
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+}
+
+.absolut{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+/* CLÍNICA */
+
+#clinica{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+#clinica li{
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+#clinica strong{
+    color: #ff725e;
+}
+
+/* FARMÁCIA */
+
+#farmacia{
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#farmacia strong{
+    color: #ff725e;
+}
+
+#farmacia img{
+    margin: 64px auto;
+}
+
+#farmacia .paragrafo{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* DÚVIDAS */
+
+#duvidas{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+#duvidas strong{
+    color: #ff725e;
+}
+
+.duvida{
+    position: relative;
+}
+
+.duvida h3{
+    border: 2px solid #ff725e;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+}
+.duvida h3:hover{
+    background-color: #ff725e;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.403);
+    transition: .2s;
+}
+
+.duvida img{
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+
+.duvida .paragrafo{
+    border-right: 1px solid #ff725e;
+    border-left: 1px solid #ff725e;
+    border-bottom: 1px solid #ff725e;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.duvida.ativa .paragrafo{
+    height: fit-content;
+    opacity: 1;
+    padding: 24px;
+}
+
+.ativa h3{
+    background-color: #ff725e;
+    color: white;
+}
+
+/* RODAPÉ */
+
+footer{
+    background-color: rgba(255, 155, 115, 0.25);
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img,
+footer .titulo{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    color: #263138;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+
+}
+
+footer p{
+    margin-bottom: 16px;
+    max-width: 350px;
+}
+
+footer p a{
+    color: #36220e;
+    text-decoration: none;
+}
+
+footer p a:hover{
+    color: #ff725e;
+}
+
+/* COPYRIGHT */
+
+#copyright{
+    background-color: #263138;
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+#copyright a{
+    color: #ff9a6c;
+}
+
+/* ESTILIZAÇÃO DO MENU-MOBILE */
+
+#menu-mobile{
+    background-color: #ffffff00;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 98px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    visibility: hidden;
+}
+
+#menu-mobile a{
+    color: #263138;
+    text-decoration: none;
+    display: block;
+    padding: 30px 30px;
+    font-size: 16px;
+}
+#menu-mobile a:hover{
+    background-color: #ff9b6c5d;
+}
+
+#btn-menu{
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.linha{
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.3s;
+}
+
+#btn-menu.ativo{
+    border: 4px solid #ff3b21;
+
+}
+
+#btn-menu.ativo .linha:nth-child(1){
+    transform: translateY(6px) rotate(-45deg);
+    background-color:#ff3b21;
+}
+
+#btn-menu.ativo .linha:nth-child(3){
+    transform: translateY(-8px) rotate(+45deg);
+    background-color: #ff3b21;
+}
+
+#btn-menu.ativo .linha:nth-child(2){
+    width: 0;
+}
+
+
+
+
+/* 1272 */
+
+@media screen and (max-width: 1272px) {
+
+    /* MENU */
+    #menu-mobile.abrir{
+        visibility: visible;
+    }
+
+    #btn-menu{
+        visibility: visible;
+    }
+
+    #menu-mobile.abrir {
+        right: 0; /* Move o menu para dentro da tela */
+    }
+
+
+    /* CABEÇALHO */
+    header .menu a{
+      display: none;
+    }
+
+    header{
+        position: relative;
+    }
+
+    /* LOGOTIPO */
+
+    .PetLife{
+        width: 100%;
+    }
+
+    /* INÍCIO */
+    #inicio{
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 10px;
+        /* background-color: #2631384d; */
+    }
+
+    #inicio h1{
+        font-size: 24px;
+        margin-bottom: 32px;
+        margin: 20px auto;
+        line-height: 110%;
+        text-align: center;
+        /* background-color: #26313851; */
+    }
+
+    .imgPrincipal{
+        width: 150%;
+        height: 300px;
+        /* background-color: #26313851; */
+    }
+
+    .paragrafo{
+        line-height: 150%;
+        margin-bottom: 42px; 
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .botom{
+        padding: 15px;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .transparent-botom{
+        padding: 16px 0px 16px 0px;
+        /* background-color: #263138; */
+        display: block;
+        text-align: center;
+    }
+
+    .absolut{
+        position: absolute;
+        width: 150%;
+
+    }
+
+    /* CLÍNICA */
+
+    #clinica{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        /* background-color: #2631384b; */
+        
+    }
+
+    #clinica .imgClinica{
+        width: 150%;
+        height: 300px;
+    }
+
+    #clinica h2{
+        text-align: center;
+        font-size: 24px;
+        line-height: 110%;
+        margin-top: 0;
+    }
+
+    #clinica h2 strong{
+        color: #ff725e;
+    }
+
+    /* FARMÁCIA */
+
+    #farmacia{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #farmacia h2{
+        text-align: center;
+        font-size: 24px;
+        line-height: 110%;
+        margin-top: 0;
+    }
+
+    #farmacia strong{
+        color: #ff725e;
+    }
+
+    .imgFarmacia{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    /* DUVIDAS */
+
+    #duvidas{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #duvidas .imgDuvidas{
+        display: inline-block;
+        width: 150%;
+        height: 300px;
+        margin-top: 0px;
+        margin-bottom: 0;
+    }
+
+    #duvidas h2{
+        text-align: center;
+        font-size: 24px;
+        line-height: 110%;
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+
+    .duvida h3{
+        font-size: 14px;
+    }
+
+    .duvida img{
+        position: absolute;
+        top: 15px;
+        right: 12px;
+    }
+
+    /* FOOTER */
+
+    .LinksRapidos{
+        display: none;
+    }
+
+    footer{
+        height: 250px;
+    }
+
+
+    footer .titulo{
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    footer p{
+        display: block;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    #copyright{
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    
+
+
+    
+
+
+
+  
+
+
+
+
+  }
