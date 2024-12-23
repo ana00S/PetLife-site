@@ -351,7 +351,7 @@ footer p a:hover{
     }
 
     .imgPrincipal{
-        width: 150%;
+        width: 100%;
         height: 300px;
         /* background-color: #26313851; */
     }
@@ -379,8 +379,8 @@ footer p a:hover{
     }
 
     .absolut{
-        position: absolute;
-        width: 150%;
+        /* position: absolute; */
+        width: 100%;
 
     }
 
@@ -397,7 +397,7 @@ footer p a:hover{
     }
 
     #clinica .imgClinica{
-        width: 150%;
+        width: 100%;
         height: 300px;
     }
 
@@ -452,7 +452,7 @@ footer p a:hover{
 
     #duvidas .imgDuvidas{
         display: inline-block;
-        width: 150%;
+        width: 100%;
         height: 300px;
         margin-top: 0px;
         margin-bottom: 0;
@@ -484,8 +484,8 @@ footer p a:hover{
 
     footer{
         height: 250px;
+        gap: 40px;
     }
-
 
     footer .titulo{
         display: block;
